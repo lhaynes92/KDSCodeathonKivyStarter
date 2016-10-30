@@ -51,6 +51,41 @@ python -m pip install kivy.deps.gstreamer --extra-index-url https://kivy.org/dow
 python -m pip install kivy 
 ```
 That should be it! Check if you have kivy by typing or copying the following in the command line:
-``` python -m kivy 
+``` 
+python -m kivy 
 ```
-This should print your kivy version (something like [info   ][kivy   ] v1.9.1) followed by info about your python version and some other messages.
+This should print your kivy version (something like `[info   ][kivy   ] v1.9.1`) followed by info about your python version and some other messages.
+
+#### Getting Started in Kivy
+
+Kivy is based around Widgets, a class that handles events and formatting for UI components. Although it is possible to code your entire Kivy app in a Python code file (extension .py), it is cleaner to move the construction of the widgets into a separate Kivy language file (extension .kv). Kivy language is built to facilitate easy nesting and organization of Widgets, the behavior of which can then be defined in the accompanying Python language file.
+
+In the example code folder you downloaded should see two files: 
+```
+MyFirstApp.py
+Starter.kv
+```
+Kivy will automatically import your Kivy file into your Python program if your .kv file has the same name as the **App class** you define in your Python file without the word App (case doesn't matter).
+
+#####Inside the starter Python file
+```python
+
+class StarterApp(App):
+  def build(self):
+    pass
+```
+So our associated Kivy file is named `Starter.kv`.
+
+You can run the starter code by navigating to the starter code folder in Terminal or Command line, then typing:
+```
+python MyFirstApp.py
+```
+## Get hacking
+
+Start changing the code. Break it, improve it, make it your own. Don't forget to ask for help if you need it or consult [Kivy's Documentation](https://kivy.org/docs/api-kivy.html).
+
+#### A few last hints:
+
+- There are a few useful tutorials starting [here](https://kivy.org/docs/tutorials/pong.html#) if you get stuck gettings started.
+- There are fairly extensive comments in the code that describe what is happening
+ - In both python and kivy files comments start with the `#` symbol
