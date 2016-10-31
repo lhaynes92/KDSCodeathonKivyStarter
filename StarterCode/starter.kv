@@ -1,6 +1,44 @@
 #starter.kv
+#:import random random
+#:import App kivy.app
+#:import Widget kivy.uix.widget
+#:import Button kivy.uix.button 
+#:import Graphics kivy.graphics
+#:import TextInput kivy.uix.textinput
+#:import FloatLayout kivy.uix.floatlayout
 
-<parent>:
-	Button:
-		id: start_button
-		text: "click!"
+<parent@FloatLayout>:
+	store: app.store
+	GridLayout: 
+	#GridLayout organizes widgets it contains, filling the grid left to right, top to bottom.
+	#This GridLayout contains 2 TextInputs, a Button and a Widget that contains an image.
+	
+	#Must have cols and rows defined, otherwise defaults to one square and widgets overlap.	
+		cols: 3   
+		rows: 3
+	
+		TextInput:  
+			id: name_input   #this id allows the widget to be accessed in the python file 
+							# with syntax self.ids.name_input within parent.
+							
+			
+		TextInput:
+			id: password_input  #name it so we can access in the python file
+			
+		Button:
+			id: start_button
+			text: "click!"
+			
+			#when the button is clicked and released, 
+			#the logIn function is run. logIn is defined in the Python file.
+			on_release: root.logIn()   
+		
+		Widget:
+			id: image_screen
+			canvas:
+				Rectangle:
+					source: 'pandaBird.jpeg'
+					size: (root.size[0], root.size[1] * .8)
+		Label:
+			id: login_message
+			text: "Please Log In!"
