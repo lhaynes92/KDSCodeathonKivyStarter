@@ -9,7 +9,7 @@ This respository will help you get started on your own mobile app using [Kivy](h
 class StarterApp(App):
   pass
 ```
-## Getting Started
+## Getting Started:
 
 #### Getting pip
 
