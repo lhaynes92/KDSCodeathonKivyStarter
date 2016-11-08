@@ -33,7 +33,7 @@ This means that you can now use the command `pip`, hurrah!
 
 You are now ready to grab your very own copy of this project. If you know how to use git, feel free to clone this repo. If that last sentence didn't make any sense, don't worry. You can just download the .zip of this entire project from that big green button in the upper right like this:
 
-<img src="https://github.com/lhaynes92/KDSCodeathonKivyStarter/blob/master/Resources/Clone.png" height="24">
+<img src="https://github.com/lhaynes92/KDSCodeathonKivyStarter/blob/master/Resources/Clone.png" alt="download project" height="100">
 
 If you downloaded the zip file, unzip it and move it out of your downloads folder. You will be working from that folder for the rest of this project, so keep it accessible.
 
