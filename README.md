@@ -32,15 +32,36 @@ You are now ready to grab your very own copy of this project. If you know how to
 
 If you downloaded the zip file, unzip it and move it out of your downloads folder. You will be working from that folder for the rest of this project, so keep it accessible.
 
-#### Installing requirements
+#### Installing requirements **for MacOS**
+1. Install Homebrew by pasting the following command into your terminal.
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+2. Now we can use brew to install requirements:
+```
+brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
+```
+3. Finally we use pip to install Kivy and Cython (needed for kivy).
+```
+pip install -I Cython==0.23
+USE_OSX_FRAMEWORKS=0 pip install kivy
+```
+
+That should be it! Check if you have kivy by typing or copying the following in the command line:
+``` 
+python -m kivy 
+```
+
+#### Installing requirements **for Windows**
 
 You now need to install the requirements for this project. It is simple now that you have `pip`. In terminal (or command prompt) run the following commands (you can copy paste).
 
 1. Ensure you have the latest pip and wheel:
 ```
 python -m pip install --upgrade pip wheel setuptools
-Install the dependencies (skip gstreamer (~90MB) if not needed, see Kivy’s dependencies):
 ```
+Install the dependencies (skip gstreamer (~90MB) if not needed, see Kivy’s dependencies):
+
 2. Ensure you have the latest pip and wheel:
 ```
 python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
@@ -86,6 +107,6 @@ Start changing the code. Break it, improve it, make it your own. Don't forget to
 
 #### A few last hints:
 
-- There are a few useful tutorials starting [here](https://kivy.org/docs/tutorials/pong.html#) if you get stuck gettings started.
-- There are fairly extensive comments in the code that describe what is happening
+- There are a few useful tutorials starting [here](https://kivy.org/docs/tutorials/pong.html#) if you want more jumping off places.
+- There are fairly extensive comments in the starter code that describe what is happening as well.
  - In both python and kivy files comments start with the `#` symbol
