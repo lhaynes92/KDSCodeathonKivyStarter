@@ -47,10 +47,14 @@ If you downloaded the zip file, unzip it and move it out of your downloads folde
 ```
 brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
 ```
-3. Finally we use pip to install Kivy and Cython (needed for kivy).
+3. Next we use pip to install Kivy and Cython (needed for kivy).
 ```
 sudo -H pip install -I Cython==0.23
 sudo -H USE_OSX_FRAMEWORKS=0 pip install kivy
+```
+4. Finally we install PyGame
+```
+brew install homebrew/python/pygame
 ```
 
 That should be it! Check if you have kivy by typing or copying the following in the command line:
