@@ -9,13 +9,18 @@ This respository will help you get started on your own mobile app using [Kivy](h
 class StarterApp(App):
   pass
 ```
-## Getting Started
+## Getting Started:
 
 #### Getting pip
 
 Unfortunately, this repository is not the only thing you need to get started. In order to install Kivy and any other programs you might need we are going to use **pip**. You will need to install pip by downloading this file: [get-pip.py](https://bootstrap.pypa.io/get-pip.py). Please right click that link and say "Save File As..." Put it in your downloads
 
-You will then run that file by using Terminal (OSX) or Command Prompt (Windows) to run these commands:
+You will then run that file by using Terminal (OSX) or Command Prompt (Windows) :
+
+MAC: To open Terminal, search "Terminal" in Spotlight and select the application
+Windows: To open Command Prompt, hit the windows key and type "Command Prompt".
+
+In the Terminal/Command Prompt, type or paste the following commands:
 
 ```
 cd Downloads
@@ -32,15 +37,42 @@ You are now ready to grab your very own copy of this project. If you know how to
 
 If you downloaded the zip file, unzip it and move it out of your downloads folder. You will be working from that folder for the rest of this project, so keep it accessible.
 
-#### Installing requirements
+#### Installing requirements **for MacOS**
 
-You now need to install the requirements for this project. It is simple now that you have `pip`. In terminal (or command prompt) run the following commands (you can copy paste).
+1. Install Homebrew by pasting the following command into your terminal.
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+2. Now we can use brew to install requirements:
+```
+brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
+```
+3. Next we use pip to install Kivy and Cython (needed for kivy).
+```
+sudo -H pip install -I Cython==0.23
+sudo -H USE_OSX_FRAMEWORKS=0 pip install kivy
+```
+4. Finally we install PyGame
+```
+brew install homebrew/python/pygame
+```
+
+That should be it! Check if you have kivy by typing or copying the following in the command line:
+``` 
+python -m kivy 
+```
+
+#### Installing requirements **for Windows**
+
+You now need to install the requirements for this project. It is simple now that you have `pip`. 
+0. command prompt) run the following commands (you can copy paste).
 
 1. Ensure you have the latest pip and wheel:
 ```
 python -m pip install --upgrade pip wheel setuptools
-Install the dependencies (skip gstreamer (~90MB) if not needed, see Kivy’s dependencies):
 ```
+Install the dependencies (skip gstreamer (~90MB) if not needed, see Kivy’s dependencies):
+
 2. Ensure you have the latest pip and wheel:
 ```
 python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
@@ -86,6 +118,6 @@ Start changing the code. Break it, improve it, make it your own. Don't forget to
 
 #### A few last hints:
 
-- There are a few useful tutorials starting [here](https://kivy.org/docs/tutorials/pong.html#) if you get stuck gettings started.
-- There are fairly extensive comments in the code that describe what is happening
+- There are a few useful tutorials starting [here](https://kivy.org/docs/tutorials/pong.html#) if you want more jumping off places.
+- There are fairly extensive comments in the starter code that describe what is happening as well.
  - In both python and kivy files comments start with the `#` symbol
