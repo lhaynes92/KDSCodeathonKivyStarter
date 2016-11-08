@@ -15,7 +15,12 @@ class StarterApp(App):
 
 Unfortunately, this repository is not the only thing you need to get started. In order to install Kivy and any other programs you might need we are going to use **pip**. You will need to install pip by downloading this file: [get-pip.py](https://bootstrap.pypa.io/get-pip.py). Please right click that link and say "Save File As..." Put it in your downloads
 
-You will then run that file by using Terminal (OSX) or Command Prompt (Windows) to run these commands:
+You will then run that file by using Terminal (OSX) or Command Prompt (Windows) :
+
+MAC: To open Terminal, search "Terminal" in Spotlight and select the application
+Windows: To open Command Prompt, hit the windows key and type "Command Prompt".
+
+In the Terminal/Command Prompt, type or paste the following commands:
 
 ```
 cd Downloads
@@ -28,11 +33,12 @@ This means that you can now use the command `pip`, hurrah!
 
 You are now ready to grab your very own copy of this project. If you know how to use git, feel free to clone this repo. If that last sentence didn't make any sense, don't worry. You can just download the .zip of this entire project from that big green button in the upper right like this:
 
-![zip download](https://github.com/lhaynes92/KDSCodeathonKivyStarter/blob/master/Resources/Clone.png "How to download a zip archive")
+![zip download](https://github.com/lhaynes92/KDSCodeathonKivyStarter/blob/master/Resources/Clone.png "How to download a zip archive" =250x250)
 
 If you downloaded the zip file, unzip it and move it out of your downloads folder. You will be working from that folder for the rest of this project, so keep it accessible.
 
 #### Installing requirements **for MacOS**
+
 1. Install Homebrew by pasting the following command into your terminal.
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -43,8 +49,8 @@ brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
 ```
 3. Finally we use pip to install Kivy and Cython (needed for kivy).
 ```
-sudo pip install -I Cython==0.23
-sudo USE_OSX_FRAMEWORKS=0 pip install kivy
+sudo -H pip install -I Cython==0.23
+sudo -H USE_OSX_FRAMEWORKS=0 pip install kivy
 ```
 
 That should be it! Check if you have kivy by typing or copying the following in the command line:
@@ -54,7 +60,8 @@ python -m kivy
 
 #### Installing requirements **for Windows**
 
-You now need to install the requirements for this project. It is simple now that you have `pip`. In terminal (or command prompt) run the following commands (you can copy paste).
+You now need to install the requirements for this project. It is simple now that you have `pip`. 
+0. command prompt) run the following commands (you can copy paste).
 
 1. Ensure you have the latest pip and wheel:
 ```
