@@ -1,15 +1,15 @@
 #Starter App
-#Importing different Widgets and event handlers
-#
 
+#Importing different Widgets and event handlers
 from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.uix.label import Label
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
-from kivy.clock import Clock
-from kivy.storage.jsonstore import JsonStore
+from kivy.uix.widget import Widget #general widgets
+from kivy.uix.label import Label # text labels
+from kivy.uix.floatlayout import FloatLayout #organizes things on the app screen
+from kivy.uix.gridlayout import GridLayout #organizes things on the app screen
+from kivy.uix.textinput import TextInput #takes in text from the app user
+from kivy.uix.button import Button #responds to clicking or releasing to run behaviors
+from kivy.clock import Clock #used to schedule events to happen after an interval of time
+from kivy.storage.jsonstore import JsonStore #used to save persisting data used over several app runs
 
 class parent(FloatLayout):
 	
@@ -30,13 +30,13 @@ class parent(FloatLayout):
 
 
 class StarterApp(App):
-	def __init__(self,**kwargs):
+	def __init__(self,**kwargs): #overload the __init__ function to add data storage
 		super(StarterApp, self).__init__(**kwargs)
 
 		#JSONstore dictionaries are a way to save data so that it persists
 		#between usages of your app. Each key is associated with one or more named
 		#parameters. Our keys are the usernames, and each username has one associated
-		#parameter, a password. All the data is stored in the associated .json file.
+		#parameter, a password. All the data is stored in the associated starter.json file.
 		#More documentation at https://kivy.org/docs/api-kivy.storage.html#module-kivy.storage
 		self.store = JsonStore('starter.json')
 	
@@ -47,4 +47,7 @@ class StarterApp(App):
 		return parent()
 
 if __name__ == '__main__':
+	#main is where we put the functions we want to run in python code
+	##in this case, we want to run our app when we run the code.
+	##in terminal type: python MyFirstApp.py to run the code.
 	StarterApp().run()

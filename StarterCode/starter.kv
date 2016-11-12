@@ -6,6 +6,7 @@
 #:import Graphics kivy.graphics
 #:import TextInput kivy.uix.textinput
 #:import FloatLayout kivy.uix.floatlayout
+#:import GridLayout kivy.uix.gridlayout
 
 <parent@FloatLayout>:
 	store: app.store
@@ -30,15 +31,17 @@
 			text: "click!"
 			
 			#when the button is clicked and released, 
-			#the logIn function is run. logIn is defined in the Python file.
+			#the logIn function is run. logIn is defined in the .py file under parent class
 			on_release: root.logIn()   
 		
+		#All widgets have a canvas, to which you can add images
 		Widget:
 			id: image_screen
 			canvas:
 				Rectangle:
-					source: 'pandaBird.jpeg'
-					size: (root.size[0], root.size[1] * .8)
+					source: 'pandaBird.jpeg'  #image files must be in same folder as code
+					size: (root.size[0], root.size[1] * .8) #set size relative to app size
+		
 		Label:
 			id: login_message
 			text: "Please Log In!"
